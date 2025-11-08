@@ -2,7 +2,7 @@
 
 ## Files Overview
 
-### DataAccessInPandas.py
+### DataAccessInPandas.py / dataAccess.py
 Methods for accessing and manipulating data in Pandas DataFrames
 
 **Functions Used:**
@@ -35,3 +35,15 @@ Statistical analysis and data transformation operations on datasets
 - `.pivot_table()` - Create pivot table with aggregation
 - `.pivot()` - Reshape data from long to wide format
 - `.melt()` - Transform data from wide to long format
+
+### reshapingdata.py
+Data combining, merging, and reshaping operations
+
+**Functions Used:**
+- `pd.read_csv()` - Load CSV data files
+- `pd.concat()` - Combine DataFrames vertically or horizontally
+- `pd.merge()` - Join DataFrames based on common columns
+- `.sort_values()` - Sort DataFrame by specified columns
+- `.groupby()` - Group data by column values
+- `.head()/.tail()` - Display first/last rows
+- `.size()` - Get group sizes after grouping
