@@ -92,4 +92,6 @@ meltedData = pivotedData.melt(
     id_vars="index", value_vars=["BETR801", "FR04014", "London Westminster"], value_name="NO2 Levels",var_name="id_location"
 )
 
-print(meltedData.head())
+# print(meltedData.head())
+print(AggregatedData)
+
