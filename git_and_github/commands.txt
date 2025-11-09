@@ -1,0 +1,77 @@
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+git rm -r  --cached .\git_and_github\
+git log --stat
+git log --pretty=oneline
+
+Git 
+
+4 env
+-Untracked(untracked by git)
+-UnModified(tracked But no changes are made)
+-Modified (Changes are made But not in staged)
+-Staged(Ready To commit)
+
+Default branch will be master or main
+
+Commands:- 
+Initialize git 
+	-git init 
+Status;- 
+	- Git status
+
+Track what all changes made
+	- git diff (unstaged changes)
+	- git diff --staged (staged changes)
+
+NOTE:- If you stage a file and ten add that file into gitignore then it will not be ignored by git
+
+Commit :-
+
+	- git commit (will open Editor and then asks you to add )
+	- git commit -m "Commit message"
+	
+Skipping Staging Part
+	- git commit -a -m "commit message"
+
+To rm file from staging area but forget to add it to gitignore
+	- git rm --cached filename
+
+Get all Previous Histories
+	- git log
+
+Complete git changes of Each commit :-
+	- git log -p  or --patch
+
+Get a Basic Stat of git changes
+	- git  log --stat
+
+Get all commit in oneline:
+	- git log --pretty=oneline
+
+Get all commit in Particular required Manner :-
+	- Git log --pretty=format:"%h -%an,%ar:%s"
+	- H is hash ,an is author , ar is time relative , s is commit message
+
+You need commit from last 2 days
+	- Git log --since=2.days
+	- Similarly minutes and hours
+
+You need commits that contains specific string in the commit message
+	- git  log --grep="message looking for"
+	
+You need the commits that are made by a specific author
+	- git log --author="gauravshetty4452@gmail.com" 
+	- git log --author="Gaurav"
+
+If you want to get the file out of staging area then you use 
+	- git restore --staged filename
+
+
+
+
+
+
+
+
