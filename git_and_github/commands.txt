@@ -1,0 +1,199 @@
+Set global username
+git config --global user.name "Gaurav Shetty"
+
+Set global email
+git config --global user.email gauravshetty4452@gmail.com
+
+Remove folder from git tracking but keep locally
+git rm -r --cached .\git_and_github\
+
+Show commit stats
+git log --stat
+
+Show commits in one line
+git log --pretty=oneline
+
+Git has 4 states:
+-Untracked(untracked by git)
+-UnModified(tracked But no changes are made)
+-Modified (Changes are made But not in staged)
+-Staged(Ready To commit)
+
+Default branch will be develop or main
+
+Initialize new git repository
+git init
+
+Check repository status
+git status
+
+See unstaged changes
+git diff
+
+See staged changes
+git diff --staged
+
+NOTE: If you stage a file and then add it to gitignore, it will not be ignored by git
+
+Commit with editor
+git commit
+
+Commit with message
+git commit -m "Commit message"
+
+Skip staging and commit all tracked files
+git commit -a -m "commit message"
+
+Remove file from staging area
+git rm --cached filename
+
+Show commit history
+git log
+
+Show detailed changes in each commit
+git log -p
+
+Show basic stats of changes
+git log --stat
+
+Show commits in one line format
+git log --pretty=oneline
+
+Custom format for commit log (hash, author, time, message)
+git log --pretty=format:"%h -%an,%ar:%s"
+
+Show commits from last 2 days
+git log --since=2.days
+
+Find commits with specific message
+git log --grep="message looking for"
+
+Show commits by specific author
+git log --author="gauravshetty4452@gmail.com"
+git log --author="Gaurav"
+
+Unstage file
+git restore --staged filename
+
+Rename remote repository
+git remote rename origin myrepo
+
+Create a tag
+git tag v2.1
+
+Show tag details
+git show v2.1
+
+Delete a tag
+git tag -d v2.1
+
+Push all tags to remote
+git push origin --tags
+
+Checkout specific tag
+git checkout v2.1
+
+Create custom git alias
+git config --global alias.last 'log -1 HEAD'
+
+Now you can use: git last (to show last commit)
+
+Create new branch
+git branch feature-login
+
+Switch to branch
+git checkout feature-login
+
+Create and switch to new branch (modern way)
+git switch -c feature-login
+
+List all branches
+git branch
+
+List branches with latest commit
+git branch -v
+
+List unmerged branches
+git branch --no-merged
+
+Rename branch
+git branch --move bugfix-old bugfix-payment
+
+Push renamed branch to remote
+git push --set-upstream origin bugfix-payment
+
+Delete merged branch
+git branch -d feature-auth
+
+Force delete branch (even unmerged)
+git branch -D hotfix-temp
+
+Remove branch from remote
+git push myrepo --delete old-feature
+
+See what's on remote repository
+git ls-remote myrepo
+
+Get detailed remote info
+git remote show myrepo
+
+Fetch changes without merging
+git fetch myrepo
+
+Fetch from all remotes
+git fetch --all
+
+Push branch to remote
+git push myrepo feature-api
+git push myrepo feature-dashboard
+
+Create tracking branch from remote
+git checkout -b feature-ui myrepo/feature-ui
+
+Create tracking branch (shorthand)
+git checkout --track myrepo/feature-backend
+
+Auto create tracking branch if name matches remote
+git checkout feature-backend
+
+Set upstream for existing branch
+git branch -u myrepo/feature-backend
+git branch --set-upstream-to myrepo/feature-backend
+
+Show tracking branch info
+git branch -vv
+
+Fetch and merge from upstream
+git pull
+
+Fetch and rebase from upstream
+git pull --rebase
+
+Merge branch into current
+git merge feature-auth
+git merge myrepo/feature-backend
+
+Replay commits on top of target branch
+git rebase develop
+
+Complex rebase with --onto
+git rebase --onto develop api-server frontend
+
+Rebase without checkout first
+git rebase develop feature-payment
+
+Switch to develop branch
+git checkout develop
+
+Fast forward merge
+git merge feature-new
+
+Cleanup merged branches
+git branch -d frontend
+git branch -d backend
+
+Make rebase default for pull
+git config --global pull.rebase true
+
+Cache credentials to avoid typing password
+git config --global credential.helper cache
