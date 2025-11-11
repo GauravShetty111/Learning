@@ -195,5 +195,128 @@ git branch -d backend
 Make rebase default for pull
 git config --global pull.rebase true
 
+last 4 commits
+git log -4   
+
+log in oneline
+git log --oneline
+To rename a Remote github name
+git remote rename origin pandass 
+
+Create a tag 
+-- git tag 1.4
+-- git show 1.4
+
+Delete a Tag 
+-- git tag -d tagname(1.4)
+
+push tags into remote
+-- git push origin --tags
+
+Checkout a Tag
+
+git checkout 1.4
+
+
+Git Alias
+
+you can set you own command that will be helping into reducing the repeated long Commands
+
+git config --global alias.last 'log -1 HEAD'
+
+Now you can use the last as a git command to log the last commit 
+
+
+git log --follow -p -- filename
+
+
+Branches 
+
+git branch newBranch
+git checkout newBranch
+
+
+New way to do the above two commands 
+git switch -c newBranch
+Created and checkout to new Branch
+
+Remove branch from remote
+git push myrepo --delete old-feature
+
+See what's on remote repository
+git ls-remote myrepo
+
+Get detailed remote info
+git remote show myrepo
+
+Fetch changes without merging
+git fetch myrepo
+
+Fetch from all remotes
+git fetch --all
+
+Push branch to remote
+git push myrepo feature-api
+git push myrepo feature-dashboard
+
+Create tracking branch from remote
+git checkout -b feature-ui myrepo/feature-ui
+
+Create tracking branch (shorthand)
+git checkout --track myrepo/feature-backend
+
+Auto create tracking branch if name matches remote
+git checkout feature-backend
+
+Set upstream for existing branch
+git branch -u myrepo/feature-backend
+git branch --set-upstream-to myrepo/feature-backend
+
+Show tracking branch info
+git branch -vv
+
+Fetch and merge from upstream
+git pull
+
+Fetch and rebase from upstream
+git pull --rebase
+
+Merge branch into current
+git merge feature-auth
+git merge myrepo/feature-backend
+
+Replay commits on top of target branch
+git rebase develop
+
+Complex rebase with --onto
+git rebase --onto develop api-server frontend
+
+get all the branches and your current Branch
+
+git branch
+
+if you want the branches with the latest commit 
+
+git branch -v
+
+You want to list brnahees without merged 
+
+git branch --no-merged
+Rebase without checkout first
+git rebase develop feature-payment
+
+Switch to develop branch
+git checkout develop
+
+Fast forward merge
+git merge feature-new
+
+Cleanup merged branches
+git branch -d frontend
+git branch -d backend
+
+Make rebase default for pull
+git config --global pull.rebase true
+
 Cache credentials to avoid typing password
 git config --global credential.helper cache
