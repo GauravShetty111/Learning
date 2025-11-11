@@ -195,5 +195,13 @@ git branch -d backend
 Make rebase default for pull
 git config --global pull.rebase true
 
-Cache credentials to avoid typing password
-git config --global credential.helper cache
+last 4 commits
+git log -4   
+
+log in oneline
+git log --oneline
+
+
+git log --follow -p -- filename
+
+
