@@ -35,5 +35,3 @@ chipo["Quantity"] = chipo["Quantity"].astype(int)
 
 
 cannedSoda = chipo[(chipo["item_name"]=="Canned Soda")&(chipo["Quantity"]>1)]["item_name"].count()
-
-
