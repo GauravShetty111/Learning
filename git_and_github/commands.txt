@@ -200,8 +200,55 @@ git log -4
 
 log in oneline
 git log --oneline
+To rename a Remote github name
+git remote rename origin pandass 
+
+Create a tag 
+-- git tag 1.4
+-- git show 1.4
+
+Delete a Tag 
+-- git tag -d tagname(1.4)
+
+push tags into remote
+-- git push origin --tags
+
+Checkout a Tag
+
+git checkout 1.4
+
+
+Git Alias
+
+you can set you own command that will be helping into reducing the repeated long Commands
+
+git config --global alias.last 'log -1 HEAD'
+
+Now you can use the last as a git command to log the last commit 
 
 
 git log --follow -p -- filename
 
 
+Branches 
+
+git branch newBranch
+git checkout newBranch
+
+
+New way to do the above two commands 
+git switch -c newBranch
+Created and checkout to new Branch
+
+
+get all the branches and your current Branch
+
+git branch
+
+if you want the branches with the latest commit 
+
+git branch -v
+
+You want to list brnahees without merged 
+
+git branch --no-merged
